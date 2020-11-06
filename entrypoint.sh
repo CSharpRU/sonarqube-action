@@ -18,6 +18,7 @@ REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}")
 [[ -z ${INPUT_PROJECTVERSION} ]] && SONAR_PROJECTVERSION="" || SONAR_PROJECTVERSION="${INPUT_PROJECTVERSION}"
 
 sonar-scanner \
+  -X
 	-Dsonar.host.url=${INPUT_HOST} \
 	-Dsonar.projectKey=${SONAR_PROJECTKEY} \
 	-Dsonar.projectName=${SONAR_PROJECTNAME} \
